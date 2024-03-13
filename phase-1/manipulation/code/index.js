@@ -66,5 +66,14 @@ form.append(dateInput, submitButton);
 // To append one child, we can use [parent].appendChild([child]).
 document.body.appendChild(form);
 
+document.querySelectorAll("p").forEach(pElement => {console.log(pElement);});
+document.querySelector("#today").textContent = "Today!";
+document.querySelector("#today").style.color = "red";
 
+document.querySelector("#tomorrow").remove();
 
+const image = document.createElement("img");
+image.src="https://www.pitpat.com/wp-content/uploads/2020/06/PP_German-Shepherd-1536x1063.jpg";
+document.body.append(image);
+// document.querySelector("#tomorrow").createElement(" sunny");
+// document.querySelector("#tomorrow").append("sunny")
