@@ -42,5 +42,41 @@ Challenges
 //        • The Shining
 // 2. Replace the <strong> element with a newly created one.
 
+document.querySelectorAll("p").forEach(pElement => {console.log(pElement);});
+document.querySelector("#today").textContent = "Today!";
+document.querySelector("#today").style.color = "red";
+
+document.querySelector("#tomorrow").remove();
+
+// const image = document.createElement("img");
+// image.src="https://www.pitpat.com/wp-content/uploads/2020/06/PP_German-Shepherd-1536x1063.jpg";
+// document.body.append(image);
+// document.querySelector("#tomorrow").createElement(" sunny");
+// document.querySelector("#tomorrow").append("sunny")
 
 
+// function displayList(name, arr) {
+//     const div = document.querySelector("#dates")
+// }
+
+function displayList(name, array) {
+    const div = document.querySelector("#dates");
+    const heading = document.createElement("h2");
+    heading.textContent = name;
+    div.append(heading);
+    const list = document.createElement("ul");
+    // [array].forEach([function]) applies [function] to each item in [array]
+    array.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        list.append(li);
+    });
+    // ...equivalent to...
+    // for (let i = 0; i < array.length; i++) {
+    //     const li = document.createElement("li");
+    //     li.textContent = array[i];
+    //     list.append(item);
+    // }
+    div.append(list);
+};
+// displayList("Book Series", ["Harry Potter", "Alex Rider", "The Magic Treehouse"]);
