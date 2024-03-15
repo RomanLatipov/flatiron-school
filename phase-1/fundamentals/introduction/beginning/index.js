@@ -92,7 +92,7 @@ function lowercase(arr) {
     return arr;
 }
 
-const mycat = "rose"
+const mycat = "rose";
 function isCute() {
     const x = " hello";
     innerFunc();
