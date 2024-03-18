@@ -24,3 +24,55 @@ Objectives
 //    into a function!
 // 2. Try writing your own POST request.
 // 3. Try writing PATCH and DELETE requests!
+
+/* crud
+create -> post
+read -> get
+update -> patch
+delete -> deletes
+*/
+
+fetch("http://localhost:3000/pokemon")
+.then(response => response.json())
+.then(pokemon => {
+    pokemon.forEach(e => {
+        const p = document.createElement("li");
+        p.textContent = e.name;
+        document.querySelector("ul").append(p);
+    })
+}).catch();
+
+// fetch("http://localhost:3000/pokemon")
+// .then(response => response.json())
+// .then(poke => {
+//     poke.forEach(e => {
+//         const temp = `
+//             <p style="color: green">${e.name}</p>
+//         `;
+//         document.querySelector("body").innerHTML += temp;
+//     });
+// }).catch();
+
+document.querySelector("form").addEventListener("submit", event  => {
+    event.preventDefault();
+    fetch("http://localhost:3000/pokemon", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            name: document.querySelector("form").name.value,
+            types: [
+                document.querySelector("form").type1.value,
+                document.querySelector("form").type2.value,
+            ]
+        })    
+    })
+    .then(response => response.json())
+    .then(pokemon => {
+        const li = document.createElement("li");
+        li.textContent = pokemon.name;
+        document.querySelector("#pokemon").append(li);
+    });
+})

@@ -1,0 +1,48 @@
+{
+  "pokemon": [
+    {
+      "id": "1",
+      "name": "Ditto",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Charzard",
+      "types": [
+        "fire",
+        "flying"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Gengar",
+      "types": [
+        "ghost"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Pikachu",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Geodude",
+      "types": [
+        "rock"
+      ]
+    },
+    {
+      "id": "f7e2",
+      "name": "Chansey",
+      "types": [
+        "fairy",
+        "fairy"
+      ]
+    }
+  ]
+}
