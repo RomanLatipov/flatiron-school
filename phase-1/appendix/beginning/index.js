@@ -71,3 +71,32 @@ console.log("~~ADVANCED ARRAY METHODS~~");
 // 1. Write a function that takes an array of sentences and returns only the questions in the list.
 // 2. Write a function that takes an array of lowercased sentences and returns them capitalized.
 const phrases = ["hello, there!", "how are you?", "It's me!"]; // example array for #1 and #2
+
+
+console.log(((a,b) => a+b)(4,5));
+function greet(end) {console.log("Hi," + this.name + end);}
+
+greet.apply({name: " Sakib"}, ["."]);
+greet.call({name: " Abby"}, "!");
+const greetMark = greet.bind({name: " Mark"}, "?");
+greetMark();
+
+const prices = [10, 50, 20, 100,];
+
+console.log(prices.find(price => price > 25));
+console.log(prices.reduce((sum, price)=> sum + price))
+console.log(prices.filter(price => price < 50));
+const doublePrices = prices.map(prices => prices * 2);
+console.log(doublePrices);
+
+function sentences(arr) {
+   return arr.filter(question => question.slice(-1) === ("?"));
+
+}
+
+function lowercased(arr) {
+   return arr.map(sentence => sentence[0].toUpperCase()+sentence.slice(1))
+}
+
+console.log(sentences(phrases));
+console.log(lowercased(phrases));
